@@ -13,7 +13,7 @@ public class L08_Checking_User_Input {
 		{
 			System.out.println("Enter a number between 0 and 10:");
 			num = in.nextInt();
-		}while((num<0) | (num > 10));
+		}while((num<0) || (num > 10));
 		
 		System.out.println(num);
 		

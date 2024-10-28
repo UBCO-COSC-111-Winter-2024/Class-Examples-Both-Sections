@@ -8,6 +8,7 @@ public class L08_DoWhile {
 
 		int sum = 0;
 		int value=0;
+		int $value = 0;
 		
 		do
 		{

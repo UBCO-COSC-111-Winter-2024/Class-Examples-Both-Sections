@@ -49,6 +49,7 @@ public class L14_More_Arrays {
 		
 		for(int val: arr)
 		{
+			//val is ACTUALLY a copy of what is stored in the array
 			val = val + 1;
 		}
 		

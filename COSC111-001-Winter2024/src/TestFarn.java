@@ -7,6 +7,8 @@ public class TestFarn {
 		Cow cow1 = new Cow();			//This creates an instance of a cow (mooooo!)
 		Cow cow2 = new Cow();
 		
+		Cow cow3 = new Cow("Ralph");
+		
 		System.out.println(cow1);	//ths prints off the object reference
 		
 		//how do I set my attributes with my cow?
@@ -21,6 +23,10 @@ public class TestFarn {
 		
 		cow1.says("mooo!!!");
 		cow2.says("mooo!!!");
+		
+		
+		System.out.println("This is cow 3");
+		System.out.println(cow3.name);
 		
 		//cow1.stomach = 200;  //we have to be careful when accessing instance data (we might break things)
 		

@@ -1,12 +1,15 @@
 
 public class Shape {
 
+
+	private String name;
 	private String colour;
 	private boolean isFilled;
 	
 	public String getColour() {
 		return colour;
 	}
+	
 	public void setColour(String colour) {
 		this.colour = colour;
 	}
@@ -17,7 +20,17 @@ public class Shape {
 		this.isFilled = isFilled;
 	}
 	
-	public final String toString()
+	
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String toString()
 	{
 		return "This is shape: colour: " + this.colour + ", isFilled is " + this.isFilled;
 	}

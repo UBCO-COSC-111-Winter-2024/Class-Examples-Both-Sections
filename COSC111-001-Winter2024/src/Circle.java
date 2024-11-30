@@ -1,10 +1,8 @@
 
-public class Circle extends Shape{
+public class Circle extends Shape {    /// child extends parent
 
 	//instance variables
-	private double radius;
-	
-	public final int number = 55;
+	double radius;
 	
 	//default
 	Circle()
@@ -12,10 +10,10 @@ public class Circle extends Shape{
 		//this.radius = 10;   		//this directly sets the instance data
 		//this.setRadius(10);		//this uses our setter to set the radius
 		this(10);					//this calls the 1-arg constructor setting the radius to 10
-		System.out.println("Circle No-Arg constructor");
+	
 	}
 	
-//	//1-arg
+	//1-arg
 	Circle(double radius)
 	{
 		this.setRadius(radius);   	//this will use our setRadius method and do the safety
@@ -26,7 +24,9 @@ public class Circle extends Shape{
 	{
 		this(radius);
 		this.setColour(colour);
-		this.setFilled(isFilled);		
+		this.setFilled(isFilled);
+		setName("bob");
+		
 	}
 	
 	
@@ -37,9 +37,6 @@ public class Circle extends Shape{
 			this.radius = radius;
 		else
 			radius = 0;
-	}
-	public double getRadius() {
-		return this.radius;
 	}
 	
 	//getters
@@ -53,13 +50,23 @@ public class Circle extends Shape{
 		return 2 * Math.PI * this.radius;
 	}
 	
+	public String getName() {
+		return "The circles's name is " + getName();   //what's going on here????
+	}
+
 	public void printInfo()
 	{
+		//A - from circle
+		//B - from parent
+		System.out.println(this.getName());
 		System.out.println("Radius : " + this.radius);
 		System.out.println("Area: " + this.getArea());
 		System.out.println("Perimeter: " + this.getPerimeter());
+		System.out.println("Colour " + this.getColour());
 		
 	}
+	
+	public String toString() {
+		return "this is Circle!";
+	}
 }
-	
-	

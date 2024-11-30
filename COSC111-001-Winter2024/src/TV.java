@@ -7,6 +7,7 @@ public class TV {
 	private int channel;
 	private int volumeLevel;
 	private boolean on;
+	private int id;
 	
 	static int countOfTVs;
 	
@@ -16,6 +17,7 @@ public class TV {
 		this.channel = 1;
 		this.on = true;
 		countOfTVs ++;
+		id = countOfTVs;	
 	}
 	
 	public TV(String name) {
@@ -91,11 +93,21 @@ public class TV {
 	}
 	
 	public void printTvStatus() {
+			System.out.println("TV id: " + this.id);
 			System.out.println(this.name + " is on: " + this.on);
 			System.out.println("Channel: " + this.channel);
 			System.out.println("Volume: " + this.volumeLevel);
 			System.out.println("Count of TVs: " + countOfTVs);
+			System.out.println();
 
+	}
+	
+	
+	///this is a static method and must be invoked in a static fashion
+	public static void printTotalNumberOfTVs(){
+		//System.out.println("Name: " + name); 	// we can't do this as it is attempting to access data
+												// belonging to a specific instance of the TV
+		System.out.println("Count of TVs: " + countOfTVs);
 
 	}
 }

@@ -10,10 +10,18 @@ public class TestTwoTVs {
 		tv2.printTvStatus();
 		tv1.printTvStatus();
 		
-		//BetterRemote br = new BetterRemote();
+		BetterRemote br = new BetterRemote();
 		
+		//br.turnOff(tv1);
 		BetterRemote.turnOff(tv1);
-		tv1.printTvStatus();
+		BetterRemote.turnOff(tv2);
+		
+		TV tv3 = new TV("Charlie");
+		BetterRemote.turnOff(tv3);
+
+		TV.printTotalNumberOfTVs();
+		
+		//tv1.printTvStatus();
 	}
 
 }

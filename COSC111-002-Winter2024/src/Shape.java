@@ -17,7 +17,7 @@ public class Shape {
 		this.isFilled = isFilled;
 	}
 	
-	public final String toString()
+	public String toString()
 	{
 		return "This is shape: colour: " + this.colour + ", isFilled is " + this.isFilled;
 	}
